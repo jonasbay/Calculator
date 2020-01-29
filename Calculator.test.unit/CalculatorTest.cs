@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
+// Prøver lige at lave en test
+
 namespace Calculator.test.unit
 { 
     [TestFixture]
@@ -20,7 +22,7 @@ namespace Calculator.test.unit
             uut = new CalculatorInt();
         }
 
-        // Add - testman
+        // Add
         [Test]
         public void addTwoNumbers_OneItem_Return4()
         {

@@ -44,6 +44,16 @@ namespace Calculator.test.unit
             Assert.That(uut.Add(-2, -2), Is.EqualTo(-4));
         }
 
+        // Add på en lettere måde
+        [TestCase(3, 2, 5)]
+        [TestCase(-3, -2, -5)]
+        [TestCase(-3, 2, -1)]
+        [TestCase(3, -2, 1)]
+        public void Add_AddPoosandNegNumbers_ResultIscorrect(int a, int b, int result)
+        {
+            Assert.That(uut.Add(a,b), Is.EqualTo(result));
+        }
+
         // Subtract
         [Test]
         public void SubtractTwoNumbers_OneItem_Return0()

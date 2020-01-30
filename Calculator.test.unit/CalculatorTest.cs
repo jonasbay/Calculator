@@ -6,8 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-// Prøver lige at lave en test
-
 namespace Calculator.test.unit
 { 
     [TestFixture]
@@ -49,7 +47,7 @@ namespace Calculator.test.unit
         [TestCase(-3, -2, -5)]
         [TestCase(-3, 2, -1)]
         [TestCase(3, -2, 1)]
-        public void Add_AddPoosandNegNumbers_ResultIscorrect(int a, int b, int result)
+        public void Add_AddPoosAndNegNumbers_ResultIscorrect(int a, int b, int result)
         {
             Assert.That(uut.Add(a,b), Is.EqualTo(result));
         }
@@ -120,5 +118,37 @@ namespace Calculator.test.unit
             Assert.That(uut.Power(-2, -2), Is.EqualTo(0.25));
         }
 
+        // Divided
+        [TestCase(4, 2, 2)]
+        [TestCase(-10, -2, 5)]
+        [TestCase(-3, 2, -1.5)]
+        [TestCase(3, -2, -1.5)]
+        public void Divide_TwoNumbers_ResultTrue(double a, double b, double result)
+        {
+            Assert.That(uut.Divide(a, b), Is.EqualTo(result));
+        }
+
+        [Test]
+        public void TestDivideWithZero_ThrowException()
+        {
+            Assert.Throws<DivideException>(() => uut.Divide(5, 0));
+        }
+
+        // Test Accumulator
+        [TestCase(5,2,7)]
+        [TestCase(-2,19,17)]
+        public void AccumulatorTest_returnTrueResult(int a, int b, int result)
+        {
+            uut.Add(a, b);
+            Assert.That(uut.Accumulator, Is.EqualTo(result));
+        }
+
+        // Clear
+        [Test]
+        public void ClearAccumulator()
+        {
+            uut.clear();
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
     }
 }

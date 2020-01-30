@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculatorInt.cs" />
+    <Compile Include="DivideException.cs" />
     <Compile Include="ICalculatorInt.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

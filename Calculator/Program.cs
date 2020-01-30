@@ -11,12 +11,28 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            CalculatorInt beregneren = new CalculatorInt();
-            double res = beregneren.Power(2, 2);
+            double res = 0;
+            double cal;
+
+            try
+            {
+                CalculatorInt beregneren = new CalculatorInt();
+                res = beregneren.Add(105, 5);
+                cal = beregneren.Accumulator;
+
+            }
+            catch (DivideException ex)
+            {
+                Console.WriteLine("Please try again.");
+                return;
+            }
 
             Console.WriteLine("*********************");
             Console.WriteLine($"The result is: {res}");
             Console.WriteLine("*********************");
+
+            Console.WriteLine($"{cal}");
+
         }
     }
 }

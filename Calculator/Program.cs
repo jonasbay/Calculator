@@ -17,7 +17,7 @@ namespace Calculator
             try
             {
                 CalculatorInt beregneren = new CalculatorInt();
-                res = beregneren.Add(105, 5);
+                res = beregneren.Power(4, 0);
                 cal = beregneren.Accumulator;
 
             }

@@ -52,11 +52,12 @@ namespace Calculator.test.unit
         }
 
         // Test add overloading
-        [TestCase(3, 8)]
-        [TestCase(-3, 2)]
-        public void Add_AddTogetherWithAccumulator(int a, int result)
+        [TestCase(3, 10)]
+        [TestCase(-3, 4)]
+        [TestCase(0, 7)]
+        public void Add_AddTogetherWithAccumulator_ResultIsCorrect(int a, int result)
         {
-            uut.Add(5);
+            uut.Add(5,2);
             Assert.That(uut.Add(a), Is.EqualTo(result));
         }
 
@@ -124,6 +125,17 @@ namespace Calculator.test.unit
         {
             // Add & Assert
             Assert.That(uut.Power(-2, -2), Is.EqualTo(0.25));
+        }
+
+        // Pow overloading test
+        [TestCase(2, 16)]
+        [TestCase(-2, 0.025)]
+        [TestCase(0,1)]
+        public void Pow_Overloading_ResultIsTrue(double exp, double result)
+        {
+            uut.Power(2, 2);
+            // Add & Assert
+            Assert.That(uut.Power(exp), Is.EqualTo(result).Within(0.05));
         }
 
         // Divided

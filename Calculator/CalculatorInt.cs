@@ -56,6 +56,15 @@ namespace Calculator
             return Accumulator = dividend / divisor;
         }
 
+        public double Divide(double a)
+        {
+            if (a == 0)
+	        {
+                throw new DivideException();
+	        }
+            return Accumulator = Accumulator / a;
+        }
+
         public void clear()
         {
             Accumulator = 0;

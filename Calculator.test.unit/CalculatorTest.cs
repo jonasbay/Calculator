@@ -96,6 +96,16 @@ namespace Calculator.test.unit
             Assert.That(uut.Multiply(-4, -4), Is.EqualTo(16));
         }
 
+        //Multiply overloading
+        [TestCase(4, 40)]
+        [TestCase(0, 0)]
+        [TestCase(-5, -50)]
+        public void Multiply_OneParameter_andAccumulator(double a, double result)
+        {
+            uut.Multiply(2, 5);
+            Assert.That(uut.Multiply(a), Is.EqualTo(result));
+        }
+
         // Pow
         [Test]
         public void PowerTwoNumbers_BothPlus_Return4()

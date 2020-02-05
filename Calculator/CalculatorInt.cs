@@ -32,7 +32,7 @@ namespace Calculator
             return Accumulator = a - b;
         }
 
-        public double Subtrackt(double a)
+        public double Subtract(double a)
         {
             return Accumulator -= a;
         }

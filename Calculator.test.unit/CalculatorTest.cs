@@ -19,7 +19,7 @@ namespace Calculator.test.unit
         {
             uut = new CalculatorInt();
         }
-
+        //Randis kommentar
         // Add
         [Test]
         public void addTwoNumbers_OneItem_Return4()

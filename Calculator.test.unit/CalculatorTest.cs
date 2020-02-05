@@ -47,7 +47,7 @@ namespace Calculator.test.unit
         [TestCase(-3, -2, -5)]
         [TestCase(-3, 2, -1)]
         [TestCase(3, -2, 1)]
-        public void Add_AddPoosAndNegNumbers_ResultIscorrect(int a, int b, int result)
+        public void Add_AddPosAndNegNumbers_ResultIsCorrect(int a, int b, int result)
         {
             Assert.That(uut.Add(a,b), Is.EqualTo(result));
         }

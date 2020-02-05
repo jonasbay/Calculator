@@ -42,6 +42,11 @@ namespace Calculator
             return Accumulator = a * b;
         }
 
+        public double Multiply(double a)
+        {
+            return Accumulator *= a;
+        }
+
         public double Power(double x, double exp)
         {
             return Accumulator = Math.Pow(x, exp);
@@ -59,6 +64,15 @@ namespace Calculator
                 throw new DivideException();
             }
             return Accumulator = dividend / divisor;
+        }
+
+        public double Divide(double a)
+        {
+            if (a == 0)
+	        {
+                throw new DivideException();
+	        }
+            return Accumulator = Accumulator / a;
         }
 
         public void clear()

@@ -69,6 +69,16 @@ namespace Calculator.test.unit
             Assert.That(uut.Subtract(2, 2), Is.EqualTo(0));
         }
 
+        // Test subtract overloading
+        [TestCase(3, 7)]
+        [TestCase(-3, 13)]
+        [TestCase(0, 10)]
+        public void Subtract_SubtractWithAccumulator(int a, int result)
+        {
+            uut.subtract(12, 2); //Accumulator is 10
+            Assert.That(uut.subtrackt(a), Is.EqualTo(result));
+        }
+
         [Test]
         public void SubtractTwoNumbers_OneItem_Return6()
         {

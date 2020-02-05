@@ -14,9 +14,11 @@ namespace Calculator
         double Subtract(double a, double b);
         double Subtract(double a);
         double Multiply(double a, double b);
+        double Multiply(double a);
         double Power(double x, double exp);
         double Power(double exp);
         double Divide(double dividend, double divisor);
+        double Divide(double a);
         void clear();
     }
 }

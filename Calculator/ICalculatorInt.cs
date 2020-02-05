@@ -11,6 +11,7 @@ namespace Calculator
     {
         double Add(double a, double b);
         double Subtract(double a, double b);
+        double Subtract(double a);
         double Multiply(double a, double b);
         double Power(double x, double exp);
         double Divide(double dividend, double divisor);

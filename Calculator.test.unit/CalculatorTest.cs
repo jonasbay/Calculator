@@ -19,7 +19,6 @@ namespace Calculator.test.unit
         {
             uut = new CalculatorInt();
         }
-        //Randis kommentar
         // Add
         [Test]
         public void addTwoNumbers_OneItem_Return4()
@@ -50,6 +49,16 @@ namespace Calculator.test.unit
         public void Add_AddPosAndNegNumbers_ResultIsCorrect(int a, int b, int result)
         {
             Assert.That(uut.Add(a,b), Is.EqualTo(result));
+        }
+
+        // Test add overloading
+        [TestCase(3, 2)]
+        [TestCase(-3, -2)]
+        [TestCase(-3, 2)]
+        public void Add_AddTogetherWithAccumulator(int a, int result)
+        {
+            
+            Assert.That(uut.Add(a, b), Is.EqualTo(result));
         }
 
         // Subtract

@@ -75,8 +75,8 @@ namespace Calculator.test.unit
         [TestCase(0, 10)]
         public void Subtract_SubtractWithAccumulator(int a, int result)
         {
-            uut.subtract(12, 2); //Accumulator is 10
-            Assert.That(uut.subtrackt(a), Is.EqualTo(result));
+            uut.Subtract(12, 2); //Accumulator is 10
+            Assert.That(uut.Subtract(a), Is.EqualTo(result));
         }
 
         [Test]

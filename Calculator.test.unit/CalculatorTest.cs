@@ -52,13 +52,12 @@ namespace Calculator.test.unit
         }
 
         // Test add overloading
-        [TestCase(3, 2)]
-        [TestCase(-3, -2)]
+        [TestCase(3, 8)]
         [TestCase(-3, 2)]
         public void Add_AddTogetherWithAccumulator(int a, int result)
         {
-            
-            Assert.That(uut.Add(a, b), Is.EqualTo(result));
+            uut.Add(5);
+            Assert.That(uut.Add(a), Is.EqualTo(result));
         }
 
         // Subtract

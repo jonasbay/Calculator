@@ -22,9 +22,19 @@ namespace Calculator
             return Accumulator = a + b;
         }
 
+        public double Add(double a)
+        {
+            return Accumulator += a;
+        }
+
         public double Subtract(double a, double b)
         {
             return Accumulator = a - b;
+        }
+
+        public double Subtract(double a)
+        {
+            return Accumulator -= a;
         }
 
         public double Multiply(double a, double b)

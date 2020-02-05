@@ -32,6 +32,11 @@ namespace Calculator
             return Accumulator = a - b;
         }
 
+        public double Subtrackt(double a)
+        {
+            return Accumulator -= a;
+        }
+
         public double Multiply(double a, double b)
         {
             return Accumulator = a * b;

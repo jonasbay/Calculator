@@ -52,6 +52,11 @@ namespace Calculator
             return Accumulator = Math.Pow(x, exp);
         }
 
+        public double Power(double exp)
+        {
+            return Accumulator = Math.Pow(Accumulator, exp);
+        }
+
         public double Divide(double dividend, double divisor)
         {
             if (divisor == 0)
